@@ -1,0 +1,97 @@
+.App {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.stats-card {
+  border-left: 4px solid;
+}
+
+.stats-card.owners {
+  border-left-color: #007bff;
+}
+
+.stats-card.vehicles {
+  border-left-color: #28a745;
+}
+
+.stats-card.violations {
+  border-left-color: #dc3545;
+}
+
+.stats-card.payments {
+  border-left-color: #ffc107;
+}
+
+.stats-card.suspensions {
+  border-left-color: #6c757d;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.alert-container {
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6c757d;
+}
+
+.empty-state h4 {
+  margin-bottom: 1rem;
+}
