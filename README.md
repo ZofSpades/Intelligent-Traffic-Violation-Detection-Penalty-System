@@ -281,3 +281,13 @@ To test the application, start by:
 2. Adding vehicles (requires owners)
 3. Reporting violations (requires vehicles and owners)
 4. Processing payments (requires violations)
+
+## 👥 Authors
+
+This project was developed by:
+- **Varun Rathod** - [github.com/ZofSpades](https://github.com/ZofSpades)
+- **Vrishabh S H** - [github.com/lxgacy85](https://github.com/lxgacy85)
+
+## 📄 License
+
+This project is created for educational purposes.
