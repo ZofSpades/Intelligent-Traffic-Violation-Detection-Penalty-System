@@ -68,7 +68,6 @@ const SuspensionList = () => {
                   <th>Expiry Date</th>
                   <th>Total Points</th>
                   <th>License Status</th>
-                  <th>Suspension Status</th>
                   <th>Suspension Start</th>
                   <th>Suspension End</th>
                   <th>Reason</th>
@@ -77,7 +76,6 @@ const SuspensionList = () => {
               <tbody>
                 {licenses.map((license) => {
                   const points = license.total_points || 0;
-                  const isSuspended = points > 12;
                   const hasSuspensions = license.suspensions && license.suspensions.length > 0;
                   
                   return (
@@ -97,59 +95,50 @@ const SuspensionList = () => {
                         </Badge>
                       </td>
                       <td>
-                        <Badge bg={isSuspended ? 'danger' : 'success'}>
-                          {isSuspended ? 'Suspended' : 'Active'}
-                        </Badge>
-                      </td>
-                      <td>
                         {hasSuspensions ? (
-                          <>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
                             {license.suspensions.map((susp, idx) => (
                               <div key={susp.suspension_id || idx} style={{ 
-                                padding: '4px 0',
+                                padding: '8px 0',
                                 borderBottom: idx < license.suspensions.length - 1 ? '1px solid #dee2e6' : 'none',
-                                minHeight: '24px',
-                                display: 'flex',
-                                alignItems: 'center'
+                                whiteSpace: 'nowrap',
+                                lineHeight: '1.5'
                               }}>
                                 {formatDate(susp.start_date)}
                               </div>
                             ))}
-                          </>
+                          </div>
                         ) : '-'}
                       </td>
                       <td>
                         {hasSuspensions ? (
-                          <>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
                             {license.suspensions.map((susp, idx) => (
                               <div key={susp.suspension_id || idx} style={{ 
-                                padding: '4px 0',
+                                padding: '8px 0',
                                 borderBottom: idx < license.suspensions.length - 1 ? '1px solid #dee2e6' : 'none',
-                                minHeight: '24px',
-                                display: 'flex',
-                                alignItems: 'center'
+                                whiteSpace: 'nowrap',
+                                lineHeight: '1.5'
                               }}>
                                 {formatDate(susp.end_date)}
                               </div>
                             ))}
-                          </>
+                          </div>
                         ) : '-'}
                       </td>
                       <td>
                         {hasSuspensions ? (
-                          <>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
                             {license.suspensions.map((susp, idx) => (
                               <div key={susp.suspension_id || idx} style={{ 
-                                padding: '4px 0',
+                                padding: '8px 0',
                                 borderBottom: idx < license.suspensions.length - 1 ? '1px solid #dee2e6' : 'none',
-                                minHeight: '24px',
-                                display: 'flex',
-                                alignItems: 'center'
+                                lineHeight: '1.5'
                               }}>
                                 {susp.reason}
                               </div>
                             ))}
-                          </>
+                          </div>
                         ) : '-'}
                       </td>
                     </tr>
